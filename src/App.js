@@ -1,12 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './lib/redux';
 
+import InboxScreen from './components/InboxScreen';
+
+import './index.css';
 function App() {
   return (
-    <div className="App">
-      Learn React
-    </div>
+    <Provider store={store}>
+      <InboxScreen />
+    </Provider>
   );
 }
-
 export default App;
